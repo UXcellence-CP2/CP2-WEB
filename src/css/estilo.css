@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
+
+
+/* reset básico */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* variaveis css */
+:root{
+    --fonte-principal: "Boldonse", system-ui;
+    --color-font1: #F5F5F5;
+    --color-font2: #333333;
+    --color-font3: #9B1B30;
+    --color-font4: #0A0A0A;
+    --color-font5: #C0C0C0;
+    --gradient:linear-gradient(to top,rgba(0,0,0,0.6),rgba(0,0,0,0.3));
+    --border-radius:20px;
+    --font-size:1rem;
+
+}
+
+html{
+    /* ajusta a basee da fonte para 10px */
+    font-size: 62.5%;
+    /* efeito de suavidade ao fazer scroll */
+
+    scroll-behavior: smooth;
+}
+body{
+    background: transparent;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+nav ul{
+    list-style: none;
+
+}
+
+a{
+    text-decoration: none;
+    font-family: var(--fonte-principal);
+    color: var(--color-font2);
+    font-weight: 900;
+    transition: color .3s;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+a:hover{
+    font-family: var(--fonte-principal);
+    color: var(--color-font3);
+}
+
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    padding: 3rem;
+    background-image: var(--gradient), url(../assets/carro\ foda\ roxo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--color-font1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header{
+    font-family: var(--fonte-principal);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1{
+    font-family: var(--fonte-principal);
+    font-size: 4rem;
+    position: relative;
+
+}
+
+span{
+    font-family: var(--fonte-principal);
+    margin-left: 8px;
+    color:var(--color-font3)
+}
+
+.header-menu{
+    display: flex;
+    gap: 20px;
+}
+
+#titulo{
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
+    font-family: var(--fonte-principal);
+}
+
+/* responsividade */
+
+@media(width <= 700px){
+
+.header-menu{
+    width: 100%;
+    height: 100vh;
+    background: var(--color-font4);
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: -100%;
+    gap: 0;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+}
+#titulo{
+    
+    font-size: 2rem;
+}
+
+}
