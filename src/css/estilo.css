@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
 
-
 /* reset básico */
 *{
     margin: 0;
@@ -8,7 +7,7 @@
     box-sizing: border-box;
 }
 
-/* variaveis css */
+/* variáveis CSS */
 :root{
     --fonte-principal: "Boldonse", system-ui;
     --color-font1: #F5F5F5;
@@ -16,19 +15,18 @@
     --color-font3: #9B1B30;
     --color-font4: #0A0A0A;
     --color-font5: #C0C0C0;
-    --gradient:linear-gradient(to top,rgba(0,0,0,0.6),rgba(0,0,0,0.3));
-    --border-radius:20px;
-    --font-size:1rem;
-
+    --gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+    --border-radius: 20px;
+    --font-size: 1rem;
 }
 
 html{
-    /* ajusta a basee da fonte para 10px */
+    /* ajusta a base da fonte para 10px */
     font-size: 62.5%;
     /* efeito de suavidade ao fazer scroll */
-
     scroll-behavior: smooth;
 }
+
 body{
     background: transparent;
 }
@@ -40,7 +38,6 @@ img{
 
 nav ul{
     list-style: none;
-
 }
 
 a{
@@ -74,48 +71,71 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #fff;
-    box-shadow: 5px 5px 5px var(--color-font3);
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 1000;
 }
 
 header nav ul{
     list-style: none;
     display: flex;
-    gap:20px;
+    gap: 20px;
 }
 
 header nav ul li a{
     text-decoration: none;
-    color: var(--color-font3);
+    color: var(--color-font1);
     font-weight: 600;
     font-family: var(--fonte-principal);
 }
+
 header nav ul li a:hover{
     color: var(--color-font3);
-    text-decoration: underline;
+    text-decoration: none; /* Removido o sublinhado */
     font-family: var(--fonte-principal);
+    
 }
+
 header #logo{
     font-family: var(--fonte-principal);
-    color: var(--color-font3);
+    color: var(--color-font1);
+    font-size: 2.5rem;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .banner #image{
     width: 100%;
     height: 100vh;
     object-fit: cover;
+    z-index: -1; /* Para garantir que a imagem fique atrás do conteúdo */
 }
 
-
-span{
+.banner-text {
     font-family: var(--fonte-principal);
-    margin-left: 8px;
-    color:var(--color-font3)
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    z-index: 1;
 }
 
-.header-menu{
-    display: flex;
-    gap: 20px;
+.banner-text span {
+    font-family: var(--fonte-principal);
+    color: var(--color-font3);
 }
 
 #titulo{
@@ -126,35 +146,39 @@ span{
 }
 
 /* responsividade */
+@media (max-width: 700px){
+    header nav ul{
+        width: 100%;
+        height: 100vh;
+        background: var(--color-font4);
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: -100%;
+        gap: 0;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+    }
 
-@media(width <= 700px){
+    #titulo{
+        font-size: 2rem;
+    }
 
-.header-menu{
-    width: 100%;
-    height: 100vh;
-    background: var(--color-font4);
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: -100%;
-    gap: 0;
-    text-align: center;
-    flex-direction: column;
-    justify-content: center;
+    .header-menu{
+        display: flex;
+        gap: 20px;
+    }
 }
-#titulo{
-    
-    font-size: 2rem;
-}
 
+/* Estilos de transição e animação */
 #slideshow {
     width: 100%;
-    height: 400px; /* Ajuste o tamanho conforme necessário */
+    height: 100vh;
     background-size: cover;
     background-position: center;
     transition: background-image 1s ease-in-out; /* Efeito de transição suave */
 }
-
 
 #slideshow img {
     width: 100%;
@@ -166,4 +190,3 @@ span{
     opacity: 1;
 }
 
-}
