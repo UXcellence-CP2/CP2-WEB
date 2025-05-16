@@ -1,7 +1,8 @@
 let imagens =[
-    'src/assets/audi horizontal.jpg',
-    'src/assets/porsche horizontal.jpg',
-    'src/assets/tesla horizonal.jpg',  
+    "src/assets/img/audi horizontal.jpg",
+    "src/assets/img/byd horizontal.jpg",
+    "src/assets/img/porsche horizontal.jpg",
+    "src/assets/img/tesla horizontal.jpg"
 ];
 
 //DECLARANDO AS VARIAVEIS

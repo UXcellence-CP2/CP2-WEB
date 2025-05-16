@@ -62,7 +62,6 @@ a:hover{
     width: 100%;
     min-height: 100vh;
     padding: 3rem;
-    background-image: var(--gradient), url(../assets/carro\ foda\ roxo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     color: var(--color-font1);
@@ -72,18 +71,41 @@ a:hover{
 }
 
 header{
-    font-family: var(--fonte-principal);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: #fff;
+    box-shadow: 5px 5px 5px var(--color-font3);
 }
 
-header h1{
+header nav ul{
+    list-style: none;
+    display: flex;
+    gap:20px;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: var(--color-font3);
+    font-weight: 600;
     font-family: var(--fonte-principal);
-    font-size: 4rem;
-    position: relative;
-
 }
+header nav ul li a:hover{
+    color: var(--color-font3);
+    text-decoration: underline;
+    font-family: var(--fonte-principal);
+}
+header #logo{
+    font-family: var(--fonte-principal);
+    color: var(--color-font3);
+}
+
+.banner #image{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
 
 span{
     font-family: var(--fonte-principal);
@@ -123,6 +145,25 @@ span{
 #titulo{
     
     font-size: 2rem;
+}
+
+#slideshow {
+    width: 100%;
+    height: 400px; /* Ajuste o tamanho conforme necessário */
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out; /* Efeito de transição suave */
+}
+
+
+#slideshow img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#slideshow img.active {
+    opacity: 1;
 }
 
 }
