@@ -217,7 +217,7 @@ header {
 }
 
 .car-card {
-    background: #fff;
+    background: #674490;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     width: 300px;
@@ -242,7 +242,7 @@ header {
 .car-card button {
     margin-top: 10px;
     padding: 10px 20px;
-    background: #674490;
+    background: #292ba3;
     color: #fff;
     border: none;
     border-radius: 4px;
