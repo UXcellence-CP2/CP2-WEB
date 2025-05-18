@@ -2,151 +2,210 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <title>Quiz UXcars - 10 Perguntas</title>
-  <link rel="stylesheet" href="../src/css/estilo.css">
-  <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
-    .question { margin-bottom: 15px; }
-    label { display: block; margin: 4px 0; }
-    button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
-    #resultado { margin-top: 20px; font-weight: bold; font-size: 18px; }
-  </style>
+  <title>Quiz UXcars</title>
+  <link rel="stylesheet" href="../src/css/estilo.css" />
 </head>
 <body>
-   <header id="header-carros">
-        <h1 id="logo">UXCARS</h1>
-        <nav id="nav-carros">
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="./sobre.html">Sobre</a></li>
-                <li><a href="./quiz.html">Quiz</a></li>
-                <li><a href="./carros.html">Carros</a></li>
-            </ul>
-        </nav>
-    </header>
-<div class="quiz-container">
-  <h1 id="quiz-title">Quiz UXcars: Você está pronto para ter um carro elétrico?</h1>
-<form id="quizForm">
-  <div class="question">
-    <p>1. Qual é o seu principal objetivo ao considerar um carro elétrico?</p>
-    <label><input type="radio" name="q1" value="4" required /> A. Economizar com combustível</label>
-    <label><input type="radio" name="q1" value="3" /> B. Ajudar o meio ambiente</label>
-    <label><input type="radio" name="q1" value="2" /> C. Ter um carro moderno</label>
-    <label><input type="radio" name="q1" value="1" /> D. Todos os anteriores</label>
+  <header id="header-carros">
+    <h1 id="logo">UXCARS</h1>
+    <nav id="nav-carros">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./sobre.html">Sobre</a></li>
+        <li><a href="./quiz.html">Quiz</a></li>
+        <li><a href="./carros.html">Carros</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="quiz-container">
+    <div id="start-container">
+      <h1 id="quiz-title">Quiz UXcars: Qual carro elétrico combina com você?</h1>
+      <button id="startBtn">Iniciar Quiz</button>
+    </div>
+
+    <form id="quizForm" style="display: none;"></form>
+    <div id="resultado"></div>
   </div>
 
-  <div class="question">
-    <p>2. Você tem acesso fácil a pontos de recarga para carros elétricos?</p>
-    <label><input type="radio" name="q2" value="4" required /> A. Sim, vários perto de mim</label>
-    <label><input type="radio" name="q2" value="3" /> B. Alguns, mas limitados</label>
-    <label><input type="radio" name="q2" value="2" /> C. Poucos, difíceis de acessar</label>
-    <label><input type="radio" name="q2" value="1" /> D. Não tenho nenhum perto</label>
-  </div>
-
-  <div class="question">
-    <p>3. Como você avalia seu conhecimento sobre manutenção de carros elétricos?</p>
-    <label><input type="radio" name="q3" value="4" required /> A. Sei bastante e estou preparado</label>
-    <label><input type="radio" name="q3" value="3" /> B. Sei o básico</label>
-    <label><input type="radio" name="q3" value="2" /> C. Sei pouco</label>
-    <label><input type="radio" name="q3" value="1" /> D. Não sei nada</label>
-  </div>
-
-  <div class="question">
-    <p>4. Quanto está disposto a investir inicialmente em um carro elétrico?</p>
-    <label><input type="radio" name="q4" value="4" required /> A. Posso investir bem</label>
-    <label><input type="radio" name="q4" value="3" /> B. Tenho um orçamento médio</label>
-    <label><input type="radio" name="q4" value="2" /> C. Orçamento apertado</label>
-    <label><input type="radio" name="q4" value="1" /> D. Quero o mais barato possível</label>
-  </div>
-
-  <div class="question">
-    <p>5. O que mais te impede hoje de comprar um carro elétrico?</p>
-    <label><input type="radio" name="q5" value="1" required /> A. Preço inicial</label>
-    <label><input type="radio" name="q5" value="2" /> B. Falta de infraestrutura de recarga</label>
-    <label><input type="radio" name="q5" value="3" /> C. Dúvidas sobre durabilidade</label>
-    <label><input type="radio" name="q5" value="4" /> D. Nada, estou pronto!</label>
-  </div>
-
-  <div class="question">
-    <p>6. Qual é sua frequência média de uso do carro?</p>
-    <label><input type="radio" name="q6" value="4" required /> A. Uso diário</label>
-    <label><input type="radio" name="q6" value="3" /> B. Uso várias vezes por semana</label>
-    <label><input type="radio" name="q6" value="2" /> C. Uso ocasional</label>
-    <label><input type="radio" name="q6" value="1" /> D. Uso raramente</label>
-  </div>
-
-  <div class="question">
-    <p>7. Você já pesquisou os incentivos fiscais ou benefícios para carros elétricos em sua região?</p>
-    <label><input type="radio" name="q7" value="4" required /> A. Sim, conheço bem os incentivos</label>
-    <label><input type="radio" name="q7" value="3" /> B. Sei um pouco sobre eles</label>
-    <label><input type="radio" name="q7" value="2" /> C. Já ouvi falar, mas não pesquisei</label>
-    <label><input type="radio" name="q7" value="1" /> D. Não sabia que existiam incentivos</label>
-  </div>
-
-  <div class="question">
-    <p>8. Você considera a autonomia (distância que o carro elétrico pode percorrer) suficiente para suas necessidades?</p>
-    <label><input type="radio" name="q8" value="4" required /> A. Sim, é suficiente</label>
-    <label><input type="radio" name="q8" value="3" /> B. Quase suficiente</label>
-    <label><input type="radio" name="q8" value="2" /> C. Pouco suficiente</label>
-    <label><input type="radio" name="q8" value="1" /> D. Não é suficiente</label>
-  </div>
-
-  <div class="question">
-    <p>9. Você se sente confortável com a tecnologia dos carros elétricos?</p>
-    <label><input type="radio" name="q9" value="4" required /> A. Sim, totalmente confortável</label>
-    <label><input type="radio" name="q9" value="3" /> B. Confortável com algumas dúvidas</label>
-    <label><input type="radio" name="q9" value="2" /> C. Pouco confortável</label>
-    <label><input type="radio" name="q9" value="1" /> D. Não confortável</label>
-  </div>
-
-  <div class="question">
-    <p>10. Como você vê o impacto ambiental dos carros elétricos?</p>
-    <label><input type="radio" name="q10" value="4" required /> A. Muito positivo</label>
-    <label><input type="radio" name="q10" value="3" /> B. Positivo</label>
-    <label><input type="radio" name="q10" value="2" /> C. Neutro</label>
-    <label><input type="radio" name="q10" value="1" /> D. Negativo</label>
-  </div>
-
-  <button type="button" id="btnResultado">Ver Resultado</button>
-</form>
-
-<div id="resultado"></div>
-</div>
-
-<script>
-  const resultadoDiv = document.getElementById('resultado');
-  const btnResultado = document.getElementById('btnResultado');
-
-  btnResultado.addEventListener('click', () => {
-    let score = 0;
-    let allAnswered = true;
-
-    for(let i = 1; i <= 10; i++) {
-      const selected = document.querySelector(`input[name="q${i}"]:checked`);
-      if(!selected) {
-        allAnswered = false;
-        break;
+  <script>
+    const perguntas = [
+      {
+        texto: "Como você define sua relação com carros?",
+        opcoes: [
+          { texto: "Amo dirigir e gosto de desempenho.", valor: 4 },
+          { texto: "Gosto de tecnologia e inovação.", valor: 3 },
+          { texto: "Quero algo prático e econômico.", valor: 2 },
+          { texto: "Prefiro conforto, segurança e status.", valor: 1 },
+        ]
+      },
+      {
+        texto: "Qual destas opções mais te agrada?",
+        opcoes: [
+          { texto: "Design esportivo e agressivo.", valor: 4 },
+          { texto: "Interface moderna e autonomia alta.", valor: 3 },
+          { texto: "Tamanho compacto e baixo consumo.", valor: 2 },
+          { texto: "Estilo sofisticado e acabamento premium.", valor: 1 },
+        ]
+      },
+      {
+        texto: "O que mais pesa na sua escolha de um carro elétrico?",
+        opcoes: [
+          { texto: "Performance e aceleração.", valor: 4 },
+          { texto: "Tecnologia e funcionalidades.", valor: 3 },
+          { texto: "Economia e custo-benefício.", valor: 2 },
+          { texto: "Conforto e imagem pessoal.", valor: 1 },
+        ]
+      },
+      {
+        texto: "Como são seus trajetos do dia a dia?",
+        opcoes: [
+          { texto: "Longos, com estrada e velocidade.", valor: 4 },
+          { texto: "Urbanos e diversos, mas eficientes.", valor: 3 },
+          { texto: "Curtos, dentro da cidade apenas.", valor: 2 },
+          { texto: "Confortáveis e sem pressa.", valor: 1 },
+        ]
+      },
+      {
+        texto: "Qual sua prioridade ao escolher um carro?",
+        opcoes: [
+          { texto: "Potência e emoção ao dirigir.", valor: 4 },
+          { texto: "Tecnologia e autonomia.", valor: 3 },
+          { texto: "Preço acessível e praticidade.", valor: 2 },
+          { texto: "Conforto, marca e prestígio.", valor: 1 },
+        ]
+      },
+      {
+        texto: "Com que frequência você troca de carro?",
+        opcoes: [
+          { texto: "A cada 1-2 anos.", valor: 4 },
+          { texto: "A cada 3-4 anos.", valor: 3 },
+          { texto: "A cada 5 anos ou mais.", valor: 2 },
+          { texto: "Só quando o carro atual não funciona mais.", valor: 1 },
+        ]
+      },
+      {
+        texto: "Qual tipo de tecnologia automotiva você valoriza mais?",
+        opcoes: [
+          { texto: "Desempenho de motor e aceleração.", valor: 4 },
+          { texto: "Sistemas autônomos e conectividade.", valor: 3 },
+          { texto: "Eficiência energética e economia.", valor: 2 },
+          { texto: "Conforto e assistência ao motorista.", valor: 1 },
+        ]
+      },
+      {
+        texto: "Qual é o tamanho ideal do carro para você?",
+        opcoes: [
+          { texto: "Esportivo e compacto.", valor: 4 },
+          { texto: "Médio, para uso urbano e viagens.", valor: 3 },
+          { texto: "Pequeno e prático.", valor: 2 },
+          { texto: "Grande e espaçoso.", valor: 1 },
+        ]
+      },
+      {
+        texto: "Você se importa com a imagem que seu carro transmite?",
+        opcoes: [
+          { texto: "Sim, muito.", valor: 1 },
+          { texto: "Um pouco.", valor: 2 },
+          { texto: "Não muito.", valor: 3 },
+          { texto: "Não me importo.", valor: 4 },
+        ]
+      },
+      {
+        texto: "Qual destas marcas você mais se identifica?",
+        opcoes: [
+          { texto: "Porsche", valor: 4 },
+          { texto: "Tesla", valor: 3 },
+          { texto: "BYD", valor: 2 },
+          { texto: "Audi", valor: 1 },
+        ]
       }
-      score += Number(selected.value);
+    ];
+
+    const startBtn = document.getElementById('startBtn');
+    const startContainer = document.getElementById('start-container');
+    const quizForm = document.getElementById('quizForm');
+    const resultadoDiv = document.getElementById('resultado');
+
+    let perguntaAtual = 0;
+    let score = 0;
+
+    startBtn.addEventListener('click', () => {
+      startContainer.style.display = 'none';
+      quizForm.style.display = 'block';
+      mostrarPergunta();
+    });
+
+    function mostrarPergunta() {
+      quizForm.innerHTML = '';
+      const pergunta = perguntas[perguntaAtual];
+
+      const div = document.createElement('div');
+      div.className = 'question';
+
+      const p = document.createElement('p');
+      p.textContent = `${perguntaAtual + 1}. ${pergunta.texto}`;
+      div.appendChild(p);
+
+      pergunta.opcoes.forEach(opcao => {
+        const label = document.createElement('label');
+        label.innerHTML = `
+          <input type="radio" name="resposta" value="${opcao.valor}" required />
+          ${opcao.texto}
+        `;
+        div.appendChild(label);
+      });
+
+      const botao = document.createElement('button');
+      botao.textContent = perguntaAtual < perguntas.length - 1 ? 'Próxima Pergunta' : 'Ver Resultado';
+      botao.type = 'button';
+      botao.addEventListener('click', proximaPergunta);
+      div.appendChild(botao);
+
+      quizForm.appendChild(div);
     }
 
-    if(!allAnswered) {
-      alert('Por favor, responda todas as perguntas.');
-      return;
+    function proximaPergunta() {
+      const selecionado = document.querySelector('input[name="resposta"]:checked');
+      if (!selecionado) {
+        alert('Por favor, selecione uma resposta.');
+        return;
+      }
+
+      score += Number(selecionado.value);
+      perguntaAtual++;
+
+      if (perguntaAtual < perguntas.length) {
+        mostrarPergunta();
+      } else {
+        mostrarResultado();
+      }
     }
 
-    let message = '';
-    if(score >= 33) {
-      message = '🚗 Você está super pronto para ter um carro elétrico!';
-    } else if(score >= 20) {
-      message = '⚡ Você está no caminho! Um pouco mais de informação e planejamento e estará pronto.';
-    } else {
-      message = '🤔 Talvez um carro elétrico ainda não seja a melhor opção para você, mas vale a pena considerar no futuro.';
-    }
+    function mostrarResultado() {
+  quizForm.style.display = 'none';
 
-    resultadoDiv.textContent = `Pontuação: ${score} - ${message}`;
-  });
-</script>
+  let mensagem = '';
+  let imagem = '';
 
+  if (score >= 33) {
+    mensagem = 'O seu carro ideal: <strong>Porsche Taycan Turbo S</strong> <br> Para quem busca emoção, desempenho e exclusividade.';
+    imagem = '<img src="../src/assets/img/porsche horizontal2.jpg" alt="Porsche Taycan Turbo S" style="max-width:100%; height:auto; margin-top:15px;">';
+  } else if (score >= 25) {
+    mensagem = 'O seu carro ideal: <strong>Tesla Model S</strong> <br> Ideal para quem valoriza tecnologia, autonomia e inovação.';
+    imagem = '<img src="../src/assets/img/tesla horizontal.jpg" alt="Tesla Model S" style="max-width:100%; height:auto; margin-top:15px;">';
+  } else if (score >= 17) {
+    mensagem = 'O seu carro ideal: <strong>BYD Dolphin</strong> <br> Perfeito para uso urbano, economia e praticidade.';
+    imagem = '<img src="../src/assets/img/byd horizontal.jpg" alt="BYD Dolphin" style="max-width:100%; height:auto; margin-top:15px;">';
+  } else {
+    imagem = '<img src="../src/assets/img/audi horizontal.jpg" alt="Audi Q8 e-tron" style="max-width:100%; height:auto; margin-top:15px;">';
+    mensagem = 'O seu carro ideal: <strong>Audi Q8 e-tron</strong> <br> Para quem preza por conforto, elegância e presença.';
+    
+  }
+
+  resultadoDiv.innerHTML = mensagem + imagem;
+}
+
+  </script>
 </body>
 </html>

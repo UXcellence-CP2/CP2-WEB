@@ -149,25 +149,16 @@ header #logo{
 
 /*Quiz*/
 
-/* src/css/estilo.css */
-
-
-/* body {
-
 body {
-
-  padding-top: 120px; /* 60px header + 60px título fixo */
-  background-color: #f9f9f9;
+  padding-top: 120px; 
+  background-color: white;
   font-family: Arial, sans-serif;
   margin: 0;
   min-height: 100vh;
   display: flex;
-
-  justify-content: center; */
-
-
-  justify-content: center;
-
+  justify-content: center; /* centraliza horizontalmente todo o conteúdo */
+  align-items: flex-start; /* alinha topo */
+}
 
 form#quizForm {
   background: white;
@@ -176,30 +167,35 @@ form#quizForm {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   max-width: 600px;
   width: 100%;
+  text-align: left;
 }
 
 .quiz-container {
   max-width: 600px;
-  margin: 100px auto 40px; /* espaço do header fixo no topo */
+  margin: 100px auto 40px; 
   padding: 20px;
   background: var(--color-font3);
-  background: rgb(169, 31, 208);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  text-align: center; /* centraliza o texto do título */
   font-family: var(--fonte-principal);
 }
 
-#quiz-title {
-  margin-bottom: 20px; /* espaço pequeno entre título e quiz */
-  font-size: 2.8rem;
-  color: var(--color-font1);
-  color: var(--color-font3);
-
+/* Container inicial: centraliza conteúdo dentro dele */
+#start-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* centraliza horizontalmente */
+  justify-content: center; /* centraliza verticalmente */
+  height: 300px; /* ajuste conforme desejar */
+  text-align: center;
 }
 
-#quizForm {
-  text-align: left;
+/* Título do quiz centralizado */
+#quiz-title {
+  font-size: 2.8rem;
+  color: var(--color-font1);
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .question {
@@ -215,23 +211,58 @@ button {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  background-color: var(--color-font2);
+  background-color: var(--color-font5);
   border: none;
   border-radius: 6px;
   transition: background-color 0.3s ease;
+  color: white;
+  margin-top: 10px;
 }
 
 button:hover {
-  background-color: var(--color-font5);
-
+  background-color: var(--color-font3);
 }
 
 #resultado {
   margin-top: 20px;
   font-weight: bold;
   font-size: 18px;
-  color: #333333;
+  color: #ffffff;
 }
+
+/* Alternativas com texto normal (sem negrito ou destaque extra) */
+label {
+  font-weight: normal; /* remove negrito */
+  cursor: pointer;
+  display: block;
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Deixa o input radio visível, mas estilizado */
+input[type="radio"] {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+/* Botão com hover suave */
+button {
+  padding: 10px 22px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #0066cc;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  color: white;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #004999;
+}
+
 
 
 /* responsividade */
@@ -421,11 +452,9 @@ header nav ul li a:hover{
     font-family: var(--fonte-principal);
     font-size: 40px;
     color: var(--color-font5);
-    margin-top: ;
+    margin-top: 10px;
     margin-bottom: 10px; 
 }
-
-
 
 #slogan {
     color: var(--color-font3);
