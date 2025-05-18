@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Quiz UXcars - 10 Perguntas</title>
+  <link rel="stylesheet" href="../src/css/estilo.css">
   <style>
     body { font-family: Arial, sans-serif; margin: 20px; }
     .question { margin-bottom: 15px; }
@@ -12,9 +13,19 @@
   </style>
 </head>
 <body>
-
-<h1>Quiz UXcars: Você está pronto para ter um carro elétrico?</h1>
-
+   <header id="header-carros">
+        <h1 id="logo">UXCARS</h1>
+        <nav id="nav-carros">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./sobre.html">Sobre</a></li>
+                <li><a href="./quiz.html">Quiz</a></li>
+                <li><a href="./carros.html">Carros</a></li>
+            </ul>
+        </nav>
+    </header>
+<div class="quiz-container">
+  <h1 id="quiz-title">Quiz UXcars: Você está pronto para ter um carro elétrico?</h1>
 <form id="quizForm">
   <div class="question">
     <p>1. Qual é o seu principal objetivo ao considerar um carro elétrico?</p>
@@ -100,6 +111,7 @@
 </form>
 
 <div id="resultado"></div>
+</div>
 
 <script>
   const resultadoDiv = document.getElementById('resultado');
