@@ -146,6 +146,37 @@ header #logo{
     font-family: var(--fonte-principal);
 }
 
+/*Quiz*/
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.question {
+  margin-bottom: 15px;
+}
+
+.options label, label {
+  display: block;
+  margin: 4px 0;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#resultado {
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+
 /* responsividade */
 @media (max-width: 700px){
     header nav ul{
@@ -250,14 +281,14 @@ header {
 }
 
 .car-card button:hover { 
-    background: ; 
+    background: white; 
 }
 
 #header-carros{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: ;
+    background: purple;
     position: fixed;
     top: 0;
     left: 0;
