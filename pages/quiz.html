@@ -2,101 +2,139 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Quiz UXcars - Carro Elétrico</title>
-  <link rel="stylesheet" href="../src/css/estilo.css" />
+  <title>Quiz UXcars - 10 Perguntas</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .question { margin-bottom: 15px; }
+    label { display: block; margin: 4px 0; }
+    button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+    #resultado { margin-top: 20px; font-weight: bold; font-size: 18px; }
+  </style>
 </head>
 <body>
-     <header id="header-carros">
-        <h1 id="logo">UXCARS</h1>
-        <nav id="nav-carros">
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="./sobre.html">Sobre</a></li>
-                <li><a href="./quiz.html">Quiz</a></li>
-                <li><a href="./carros.html">Carros</a></li>
-            </ul>
-        </nav>
-    </header>
-  <h1>Quiz UXcars: Você está pronto para ter um carro elétrico?</h1>
-  <form id="quizForm">
 
-    <div class="question">
-      <p>1. Qual é o seu principal objetivo ao considerar um carro elétrico?</p>
-      <label><input type="radio" name="q1" value="4" required /> A. Economizar com combustível</label>
-      <label><input type="radio" name="q1" value="3" /> B. Ajudar o meio ambiente</label>
-      <label><input type="radio" name="q1" value="2" /> C. Ter um carro moderno</label>
-      <label><input type="radio" name="q1" value="1" /> D. Todos os anteriores</label>
-    </div>
+<h1>Quiz UXcars: Você está pronto para ter um carro elétrico?</h1>
 
-    <div class="question">
-      <p>2. Você sabe onde existem estações de recarga próximas à sua casa ou trabalho?</p>
-      <label><input type="radio" name="q2" value="3" required /> A. Sim, há várias opções</label>
-      <label><input type="radio" name="q2" value="2" /> B. Algumas, mas não sei exatamente onde</label>
-      <label><input type="radio" name="q2" value="1" /> C. Não tenho ideia</label>
-    </div>
+<form id="quizForm">
+  <div class="question">
+    <p>1. Qual é o seu principal objetivo ao considerar um carro elétrico?</p>
+    <label><input type="radio" name="q1" value="4" required /> A. Economizar com combustível</label>
+    <label><input type="radio" name="q1" value="3" /> B. Ajudar o meio ambiente</label>
+    <label><input type="radio" name="q1" value="2" /> C. Ter um carro moderno</label>
+    <label><input type="radio" name="q1" value="1" /> D. Todos os anteriores</label>
+  </div>
 
-    <div class="question">
-      <p>3. Quantos quilômetros você dirige por dia, em média?</p>
-      <label><input type="radio" name="q3" value="3" required /> A. Menos de 50 km</label>
-      <label><input type="radio" name="q3" value="2" /> B. Entre 50 e 150 km</label>
-      <label><input type="radio" name="q3" value="1" /> C. Mais de 150 km</label>
-    </div>
+  <div class="question">
+    <p>2. Você tem acesso fácil a pontos de recarga para carros elétricos?</p>
+    <label><input type="radio" name="q2" value="4" required /> A. Sim, vários perto de mim</label>
+    <label><input type="radio" name="q2" value="3" /> B. Alguns, mas limitados</label>
+    <label><input type="radio" name="q2" value="2" /> C. Poucos, difíceis de acessar</label>
+    <label><input type="radio" name="q2" value="1" /> D. Não tenho nenhum perto</label>
+  </div>
 
-    <div class="question">
-      <p>4. Você tem uma garagem ou vaga com acesso à tomada para carregar o carro em casa?</p>
-      <label><input type="radio" name="q4" value="3" required /> A. Sim</label>
-      <label><input type="radio" name="q4" value="1" /> B. Não</label>
-      <label><input type="radio" name="q4" value="2" /> C. Estou planejando instalar</label>
-    </div>
+  <div class="question">
+    <p>3. Como você avalia seu conhecimento sobre manutenção de carros elétricos?</p>
+    <label><input type="radio" name="q3" value="4" required /> A. Sei bastante e estou preparado</label>
+    <label><input type="radio" name="q3" value="3" /> B. Sei o básico</label>
+    <label><input type="radio" name="q3" value="2" /> C. Sei pouco</label>
+    <label><input type="radio" name="q3" value="1" /> D. Não sei nada</label>
+  </div>
 
-    <div class="question">
-      <p>5. Quanto tempo você está disposto a esperar para recarregar completamente seu carro?</p>
-      <label><input type="radio" name="q5" value="3" required /> A. Menos de 1 hora</label>
-      <label><input type="radio" name="q5" value="2" /> B. 1 a 5 horas</label>
-      <label><input type="radio" name="q5" value="1" /> C. Carregamento noturno não seria um problema</label>
-    </div>
+  <div class="question">
+    <p>4. Quanto está disposto a investir inicialmente em um carro elétrico?</p>
+    <label><input type="radio" name="q4" value="4" required /> A. Posso investir bem</label>
+    <label><input type="radio" name="q4" value="3" /> B. Tenho um orçamento médio</label>
+    <label><input type="radio" name="q4" value="2" /> C. Orçamento apertado</label>
+    <label><input type="radio" name="q4" value="1" /> D. Quero o mais barato possível</label>
+  </div>
 
-    <div class="question">
-      <p>6. Qual é o seu orçamento para investir em um carro elétrico?</p>
-      <label><input type="radio" name="q6" value="3" required /> A. Até R$ 120.000</label>
-      <label><input type="radio" name="q6" value="2" /> B. R$ 120.000 a R$ 200.000</label>
-      <label><input type="radio" name="q6" value="1" /> C. Mais de R$ 200.000</label>
-    </div>
+  <div class="question">
+    <p>5. O que mais te impede hoje de comprar um carro elétrico?</p>
+    <label><input type="radio" name="q5" value="1" required /> A. Preço inicial</label>
+    <label><input type="radio" name="q5" value="2" /> B. Falta de infraestrutura de recarga</label>
+    <label><input type="radio" name="q5" value="3" /> C. Dúvidas sobre durabilidade</label>
+    <label><input type="radio" name="q5" value="4" /> D. Nada, estou pronto!</label>
+  </div>
 
-    <div class="question">
-      <p>7. Você se importa com o tempo de aceleração ou desempenho esportivo do carro?</p>
-      <label><input type="radio" name="q7" value="3" required /> A. Sim, quero um carro rápido</label>
-      <label><input type="radio" name="q7" value="1" /> B. Não, me preocupo mais com eficiência</label>
-      <label><input type="radio" name="q7" value="2" /> C. Gosto de um equilíbrio</label>
-    </div>
+  <div class="question">
+    <p>6. Qual é sua frequência média de uso do carro?</p>
+    <label><input type="radio" name="q6" value="4" required /> A. Uso diário</label>
+    <label><input type="radio" name="q6" value="3" /> B. Uso várias vezes por semana</label>
+    <label><input type="radio" name="q6" value="2" /> C. Uso ocasional</label>
+    <label><input type="radio" name="q6" value="1" /> D. Uso raramente</label>
+  </div>
 
-    <div class="question">
-      <p>8. Está ciente de que a manutenção de um carro elétrico tende a ser mais barata do que a de um carro a combustão?</p>
-      <label><input type="radio" name="q8" value="3" required /> A. Sim, já sabia</label>
-      <label><input type="radio" name="q8" value="1" /> B. Não, essa é uma novidade para mim</label>
-    </div>
+  <div class="question">
+    <p>7. Você já pesquisou os incentivos fiscais ou benefícios para carros elétricos em sua região?</p>
+    <label><input type="radio" name="q7" value="4" required /> A. Sim, conheço bem os incentivos</label>
+    <label><input type="radio" name="q7" value="3" /> B. Sei um pouco sobre eles</label>
+    <label><input type="radio" name="q7" value="2" /> C. Já ouvi falar, mas não pesquisei</label>
+    <label><input type="radio" name="q7" value="1" /> D. Não sabia que existiam incentivos</label>
+  </div>
 
-    <div class="question">
-      <p>9. Você já testou ou dirigiu um carro elétrico antes?</p>
-      <label><input type="radio" name="q9" value="3" required /> A. Sim, e gostei da experiência</label>
-      <label><input type="radio" name="q9" value="2" /> B. Não, mas tenho interesse</label>
-      <label><input type="radio" name="q9" value="1" /> C. Não, e tenho dúvidas se vou gostar</label>
-    </div>
+  <div class="question">
+    <p>8. Você considera a autonomia (distância que o carro elétrico pode percorrer) suficiente para suas necessidades?</p>
+    <label><input type="radio" name="q8" value="4" required /> A. Sim, é suficiente</label>
+    <label><input type="radio" name="q8" value="3" /> B. Quase suficiente</label>
+    <label><input type="radio" name="q8" value="2" /> C. Pouco suficiente</label>
+    <label><input type="radio" name="q8" value="1" /> D. Não é suficiente</label>
+  </div>
 
-    <div class="question">
-      <p>10. O que mais te impede hoje de comprar um carro elétrico?</p>
-      <label><input type="radio" name="q10" value="1" required /> A. Preço inicial</label>
-      <label><input type="radio" name="q10" value="2" /> B. Falta de infraestrutura de recarga</label>
-      <label><input type="radio" name="q10" value="3" /> C. Dúvidas sobre durabilidade</label>
-      <label><input type="radio" name="q10" value="4" /> D. Nada, estou pronto!</label>
-    </div>
+  <div class="question">
+    <p>9. Você se sente confortável com a tecnologia dos carros elétricos?</p>
+    <label><input type="radio" name="q9" value="4" required /> A. Sim, totalmente confortável</label>
+    <label><input type="radio" name="q9" value="3" /> B. Confortável com algumas dúvidas</label>
+    <label><input type="radio" name="q9" value="2" /> C. Pouco confortável</label>
+    <label><input type="radio" name="q9" value="1" /> D. Não confortável</label>
+  </div>
 
-    <button type="button" id="btnResultado">Ver Resultado</button>
-  </form>
+  <div class="question">
+    <p>10. Como você vê o impacto ambiental dos carros elétricos?</p>
+    <label><input type="radio" name="q10" value="4" required /> A. Muito positivo</label>
+    <label><input type="radio" name="q10" value="3" /> B. Positivo</label>
+    <label><input type="radio" name="q10" value="2" /> C. Neutro</label>
+    <label><input type="radio" name="q10" value="1" /> D. Negativo</label>
+  </div>
 
-  <div id="resultado"></div>
+  <button type="button" id="btnResultado">Ver Resultado</button>
+</form>
 
-<script src="script.js"></script>
+<div id="resultado"></div>
+
+<script>
+  const resultadoDiv = document.getElementById('resultado');
+  const btnResultado = document.getElementById('btnResultado');
+
+  btnResultado.addEventListener('click', () => {
+    let score = 0;
+    let allAnswered = true;
+
+    for(let i = 1; i <= 10; i++) {
+      const selected = document.querySelector(`input[name="q${i}"]:checked`);
+      if(!selected) {
+        allAnswered = false;
+        break;
+      }
+      score += Number(selected.value);
+    }
+
+    if(!allAnswered) {
+      alert('Por favor, responda todas as perguntas.');
+      return;
+    }
+
+    let message = '';
+    if(score >= 33) {
+      message = '🚗 Você está super pronto para ter um carro elétrico!';
+    } else if(score >= 20) {
+      message = '⚡ Você está no caminho! Um pouco mais de informação e planejamento e estará pronto.';
+    } else {
+      message = '🤔 Talvez um carro elétrico ainda não seja a melhor opção para você, mas vale a pena considerar no futuro.';
+    }
+
+    resultadoDiv.textContent = `Pontuação: ${score} - ${message}`;
+  });
+</script>
+
 </body>
 </html>
