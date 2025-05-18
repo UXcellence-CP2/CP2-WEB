@@ -12,9 +12,9 @@
     --fonte-principal: "Boldonse", system-ui;
     --color-font1: #F5F5F5;
     --color-font2: #333333;
-    --color-font3: #9B1B30;
+    --color-font3: #2e5e7e;
     --color-font4: #0A0A0A;
-    --color-font5: #C0C0C0;
+    --color-font5: #8bbeff;
     --gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
     --border-radius: 20px;
     --font-size: 1rem;
@@ -66,19 +66,20 @@ a:hover{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+   
 }
 
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: transparent;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 20px;
     z-index: 1000;
+ 
 }
 
 header nav ul{
@@ -150,15 +151,23 @@ header #logo{
 
 /* src/css/estilo.css */
 
+
+/* body {
+
 body {
+
   padding-top: 120px; /* 60px header + 60px título fixo */
   background-color: #f9f9f9;
   font-family: Arial, sans-serif;
   margin: 0;
   min-height: 100vh;
   display: flex;
+
+  justify-content: center; */
+
+
   justify-content: center;
-}
+
 
 form#quizForm {
   background: white;
@@ -173,6 +182,7 @@ form#quizForm {
   max-width: 600px;
   margin: 100px auto 40px; /* espaço do header fixo no topo */
   padding: 20px;
+  background: var(--color-font3);
   background: rgb(169, 31, 208);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -183,7 +193,9 @@ form#quizForm {
 #quiz-title {
   margin-bottom: 20px; /* espaço pequeno entre título e quiz */
   font-size: 2.8rem;
+  color: var(--color-font1);
   color: var(--color-font3);
+
 }
 
 #quizForm {
@@ -203,15 +215,15 @@ button {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  background-color: #9B1B30;
-  color: white;
+  background-color: var(--color-font2);
   border: none;
   border-radius: 6px;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #b32c3f;
+  background-color: var(--color-font5);
+
 }
 
 #resultado {
@@ -274,7 +286,7 @@ body {
 }
 
 header { 
-    background: #674490; 
+    background: transparent; 
     color: #fff; 
     padding: 20px; 
     text-align: center; 
@@ -293,7 +305,7 @@ header {
 }
 
 .car-card {
-    background: #674490;
+    background: var(--color-font3);
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     width: 300px;
@@ -318,8 +330,8 @@ header {
 .car-card button {
     margin-top: 10px;
     padding: 10px 20px;
-    background: #292ba3;
-    color: #fff;
+    background: var(--color-font2);
+    color: var(--color-font5);
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -329,11 +341,12 @@ header {
     background: white; 
 }
 
-#header-carros{
+#header-carros,
+header-sobre {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: purple;
+    background: var(--color-font3);
     position: fixed;
     top: 0;
     left: 0;
@@ -359,4 +372,107 @@ header nav ul li a:hover{
     color: var(--color-font3);
     text-decoration: none; /* Removido o sublinhado */
     font-family: var(--fonte-principal);
+
 }
+
+
+#conteudo1 {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../assets/img/byd horizontal.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#uxcars{
+    margin-top: 60rem;
+    font-size: 8rem;
+    color: var(--color-font3);
+}
+.outros {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(28, 28, 28, 0.9); 
+    font-family: var(--fonte-principal);
+    font-size: 28px;
+    color: #f5f1e3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    box-sizing: border-box;
+    z-index: 1;
+    padding-bottom: 50rem;
+ 
+}
+
+
+.outros h2 {
+    font-family: var(--fonte-principal);
+    font-size: 40px;
+    color: var(--color-font5);
+    margin-top: ;
+    margin-bottom: 10px; 
+}
+
+
+
+#slogan {
+    color: var(--color-font3);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 60px;
+}
+
+
+.outros p {
+    margin-bottom: 20px;
+}
+
+.veja-carros {
+    
+    background-color: #1c1c1c;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 60px 20px;
+    font-family: var(--fonte-principal);
+}
+
+.veja-carros h2 {
+    font-size: 3rem;
+    color: var(--color-font5); /* usa o vermelho elegante definido antes */
+    margin-bottom: 20px;
+}
+
+.veja-carros p {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+.btn-carros {
+    background-color: var(--color-font3);
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn-carros:hover {
+    background-color: var(--color-font2);
+}
+
+
