@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 /* reset básico */
 *{
@@ -10,6 +11,7 @@
 /* variáveis CSS */
 :root{
     --fonte-principal: "Boldonse", system-ui;
+    --fonte-footer: "Comfortaa", sans-serif;
     --color-font1: #F5F5F5;
     --color-font2: #333333;
     --color-font3: #2e5e7e;
@@ -97,7 +99,7 @@ header nav ul li a{
 
 header nav ul li a:hover{
     color: var(--color-font3);
-    text-decoration: none; /* Removido o sublinhado */
+    text-decoration: none;
     font-family: var(--fonte-principal);
     
 }
@@ -119,7 +121,7 @@ header #logo{
     width: 100%;
     height: 100vh;
     object-fit: cover;
-    z-index: -1; /* Para garantir que a imagem fique atrás do conteúdo */
+    z-index: -1; 
 }
 
 .banner-text {
@@ -149,22 +151,10 @@ header #logo{
 
 /*Quiz*/
 
-body {
-  padding-top: 120px; 
-  background-color: white;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center; /* centraliza horizontalmente todo o conteúdo */
-  align-items: flex-start; /* alinha topo */
-}
 
 form#quizForm {
-  background: white;
+  background: var(--color-font3);
   padding: 30px 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   max-width: 600px;
   width: 100%;
   text-align: left;
@@ -180,17 +170,24 @@ form#quizForm {
   font-family: var(--fonte-principal);
 }
 
-/* Container inicial: centraliza conteúdo dentro dele */
+
 #start-container {
   display: flex;
   flex-direction: column;
-  align-items: center;  /* centraliza horizontalmente */
-  justify-content: center; /* centraliza verticalmente */
-  height: 300px; /* ajuste conforme desejar */
+  align-items: center; 
+  justify-content: center; 
+  height: 300px; 
   text-align: center;
+  background: var(--color-font3);
+  text-align: center;
+  font-family: var(--fonte-principal);
 }
 
-/* Título do quiz centralizado */
+#quiz-title {
+  margin-bottom: 20px; 
+  color: var(--color-font1);
+}
+
 #quiz-title {
   font-size: 2.8rem;
   color: var(--color-font1);
@@ -212,8 +209,10 @@ button {
   font-size: 16px;
   cursor: pointer;
   background-color: var(--color-font5);
+  color: #2e5e7e;
+  background-color: var(--color-font4);
   border: none;
-  border-radius: 6px;
+  border-radius: 4px;
   transition: background-color 0.3s ease;
   color: white;
   margin-top: 10px;
@@ -230,9 +229,8 @@ button:hover {
   color: #ffffff;
 }
 
-/* Alternativas com texto normal (sem negrito ou destaque extra) */
 label {
-  font-weight: normal; /* remove negrito */
+  font-weight: normal;
   cursor: pointer;
   display: block;
   margin: 8px 0;
@@ -240,13 +238,12 @@ label {
   color: #333;
 }
 
-/* Deixa o input radio visível, mas estilizado */
+
 input[type="radio"] {
   margin-right: 8px;
   cursor: pointer;
 }
 
-/* Botão com hover suave */
 button {
   padding: 10px 22px;
   font-size: 16px;
@@ -291,13 +288,13 @@ button:hover {
     }
 }
 
-/* Estilos de transição e animação */
+
 #slideshow {
     width: 100%;
     height: 100vh;
     background-size: cover;
     background-position: center;
-    transition: background-image 1s ease-in-out; /* Efeito de transição suave */
+    transition: background-image 1s ease-in-out; 
 }
 
 #slideshow img {
@@ -312,7 +309,7 @@ button:hover {
 
 body { 
     font-family: Arial, sans-serif; 
-    background: #f4f4f4; 
+    background: #c4c4c4; 
     margin: 0; 
 }
 
@@ -331,11 +328,13 @@ header {
 
 .car-list { 
     display: flex; 
-    flex-wrap: wrap; 
-    gap: 20px; 
+    flex-wrap: wrap-reverse;
+    gap: 40px; 
 }
 
 .car-card {
+    font-family: var(--fonte-footer);
+    font-size: 12px;
     background: var(--color-font3);
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -346,11 +345,13 @@ header {
     align-items: center;
 }
 .car-card img { 
+    margin-bottom: 20px;
     width: 100%; 
     border-radius: 6px; 
 }
 
 .car-card h3 { 
+    font-family: var(--fonte-footer);
     margin: 10px 0 5px 0; 
 }
 
@@ -359,17 +360,19 @@ header {
 }
 
 .car-card button {
+    width: 30rem;
+    font-family: var(--fonte-principal);
     margin-top: 10px;
     padding: 10px 20px;
-    background: var(--color-font2);
+    background: var(--color-font3);
     color: var(--color-font5);
     border: none;
-    border-radius: 4px;
+    border-radius: 0px;
     cursor: pointer;
 }
 
 .car-card button:hover { 
-    background: white; 
+    background: var(--color-font2); 
 }
 
 #header-carros,
@@ -401,7 +404,7 @@ header nav ul li a{
 
 header nav ul li a:hover{
     color: var(--color-font3);
-    text-decoration: none; /* Removido o sublinhado */
+    text-decoration: none; 
     font-family: var(--fonte-principal);
 
 }
@@ -479,7 +482,7 @@ header nav ul li a:hover{
 
 .veja-carros h2 {
     font-size: 3rem;
-    color: var(--color-font5); /* usa o vermelho elegante definido antes */
+    color: var(--color-font5);
     margin-bottom: 20px;
 }
 
@@ -504,4 +507,17 @@ header nav ul li a:hover{
     background-color: var(--color-font2);
 }
 
+.footer {
+    display: flex;
+    margin-top: 30px;
+    background-color: #1c1c1c;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 20px 10px;
+    font-family: var(--fonte-footer);
+    font-size: 1.4rem;
+}
 
+.footer-content p {
+  margin: 5px 0;
+}
